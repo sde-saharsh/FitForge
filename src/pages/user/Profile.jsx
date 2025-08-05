@@ -64,7 +64,7 @@ const Profile = ({ modeLight, setModeLight }) => {
   );
 
   return (
-    <div className={`${modeLight ? 'bg-gray-50' : 'bg-gray-950'} min-h-screen py-10 px-4 transition-colors`}>
+    <div className={` min-h-screen py-10 px-4 transition-colors`}>
       <div
         className={`max-w-3xl mx-auto p-8 rounded-2xl shadow-2xl 
         ${modeLight ? 'bg-white' : 'bg-opacity-80 bg-gray-800 backdrop-blur-xl border border-gray-700'}`}
@@ -120,10 +120,22 @@ const Profile = ({ modeLight, setModeLight }) => {
 
         {/* BMI */}
         <div className="mt-7 text-center">
-          <p className="text-lg font-semibold text-gray-900 dark:text-white">
+          <p
+            className={`
+              text-lg font-semibold
+              px-4 py-2 rounded-lg inline-block
+              border 
+              ${modeLight
+                ? 'text-gray-900 bg-white border-sky-100'
+                : 'text-white bg-opacity-80 bg-gray-800 backdrop-blur-xl border-gray-700'
+              }
+              transition-colors duration-200
+            `}
+          >
             Your BMI: <span className="text-sky-500">{bmi}</span>
           </p>
         </div>
+
 
         {/* Save Button */}
         <div className="text-center mt-8">

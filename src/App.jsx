@@ -33,7 +33,7 @@ const App = () => {
       className={`min-h-screen transition-all ${
         modeLight
           ? 'bg-gray-50 text-gray-900'
-          : 'bg-gray-950 text-white'
+          : 'bg-gradient-to-br from-cyan-100 to-sky-200 dark:from-gray-950 dark:to-gray-800'
       }`}
     >
       <Navbar modeLight={modeLight} />
